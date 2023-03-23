@@ -1,0 +1,24 @@
+version: '3.9'
+
+services:
+  app:
+    build: .
+    image: wtkeqrf0/tgbot-app
+    volumes:
+      - ./app:/opt/server
+      - ./static:/opt/static
+    ports:
+      - '3000:3000'
+    depends_on:
+      - postgres
+    command: ['go','run','cmd/main/app.go']
+
+  postgres:
+    image: postgres:alpine
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=Ubythfkbcbvec2
+      - POSTGRES_DB=tg_bot
+    ports:
+      - '5432:5432'
+    restart: always

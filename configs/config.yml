@@ -1,0 +1,9 @@
+prod: true
+bot:
+  secret: "6049622717:AAEps2leDafnL566U03ijOwhDS4hYIesVTg"
+  weather_key: "0fe15b01d12f43a06dabfd67b2aa62bb"
+
+postgres:
+  username: "postgres"
+  db_name: "tg_bot"
+  password: "Ubythfkbcbvec2"
