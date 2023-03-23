@@ -4,9 +4,6 @@ services:
   app:
     #build: .
     image: wtkeqrf0/tgbot-app
-    volumes:
-      - ./app:/opt/server
-      - ./static:/opt/static
     ports:
       - '3000:3000'
     depends_on:
